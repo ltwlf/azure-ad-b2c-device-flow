@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -39,14 +40,15 @@ namespace Ltwlf.Azure.B2C
 
             var authState = await Helpers.GetValueByKeyPattern<AuthorizationState>(_muxer, $"*:{userCode}");
 
+            var tenant = _config.GetValue<string>("B2CTenant");
+            var signInFlow = _config.GetValue<string>("SignInFlow");
+            var appId = _config.GetValue<string>("AppId");
+            var redirectUri = HttpUtility.UrlEncode(_config.GetValue<string>("RedirectUri"));
+            var scope = authState.Scope ?? "openid";
 
-            if (authState != null)
-            {
-                return new RedirectResult(
-                    $"{_config.GetValue<string>("SignInFlow")}&state={authState.UserCode}");
-            }
-
-            return new UnauthorizedResult();
+            return new RedirectResult(
+                $"{tenant}/oauth2/v2.0/authorize?p={signInFlow}&client_Id={appId}&redirect_uri={redirectUri}&scope={scope}&state={authState.UserCode}&nonce=defaultNonce&response_type=code&prompt=login");
+            
         }
     }
 }

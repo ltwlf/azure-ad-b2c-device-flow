@@ -71,7 +71,7 @@ namespace Ltwlf.Azure.B2C
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
                 JsonConvert.SerializeObject(authState), new TimeSpan(0, 0, authState.ExpiresIn));
             
-            return new OkObjectResult(JsonConvert.SerializeObject(response));
+            return new OkObjectResult(response);
         }
     }
 }

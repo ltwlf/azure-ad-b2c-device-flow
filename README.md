@@ -9,7 +9,7 @@ Accept: */*
 Content-Type: application/x-www-form-urlencoded
 Cache-Control: no-cache
 
-clientId=mydeviceId
+clientId=mydeviceId&scope=offline_access
 ``` 
 
 Example Response:
@@ -74,6 +74,7 @@ Date: Wed, 30 Sep 2020 12:46:31 GMT
     "token_type":null,
     "expires_in":0,
     "refresh_token":null,
-    "scope":null}
+    "scope":nul
+}
 
 ```

@@ -19,6 +19,7 @@ namespace Ltwlf.Azure.B2C
             [JsonProperty("token_type")] public string TokenType { get; set; }
             [JsonProperty("expires_in")] public int ExpiresIn { get; set; }
             [JsonProperty("refresh_token")] public string RefreshToken { get; set; }
+            
             [JsonProperty("scope")] public string Scope { get; set; }
         }
 
@@ -54,14 +55,18 @@ namespace Ltwlf.Azure.B2C
 
             var authState = JsonConvert.DeserializeObject<AuthorizationState>(authStateJson);
 
-            if (authState.Token == null) return new BadRequestObjectResult(new {Value = "authorization_pending"});
+            if (authState.AccessToken == null) return new BadRequestObjectResult("authorization_pending");
 
             var tokenResponse = new TokenResponse
             {
-                AccessToken = authState.Token
+                AccessToken = authState.AccessToken,
+                RefreshToken = authState.RefreshToken,
+                ExpiresIn = authState.ExpiresIn,
+                TokenType = authState.TokenType,
+                Scope =  authState.Scope
             };
 
-            return new OkObjectResult(JsonConvert.SerializeObject(tokenResponse));
+            return new OkObjectResult(tokenResponse);
         }
     }
 }

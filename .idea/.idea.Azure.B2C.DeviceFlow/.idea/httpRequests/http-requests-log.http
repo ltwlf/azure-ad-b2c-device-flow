@@ -1,0 +1,526 @@
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=db77ea83-b920-4dba-91d0-a839a7c83b64
+
+<> 2020-09-30T060413.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=db77ea83-b920-4dba-91d0-a839a7c83b64
+
+<> 2020-09-30T060400.400.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T060323.200.json
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=5e6deb92-d420-49fb-8a51-ff1724db5147
+
+<> 2020-09-30T060235.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T060125.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T060047.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T060022.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=b19de28f-29d2-41f4-8fca-7d10fb3bdb9b
+
+<> 2020-09-30T055416.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Content-Type: application/x-www-form-urlencoded
+
+clientId=mydeviceid&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T055331.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=c4d40783-5671-4bec-9ab5-2b3b9a619181
+
+<> 2020-09-30T054624.400.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Content-Type: application/x-www-form-urlencoded
+
+clientId=mydeviceid
+
+<> 2020-09-30T054541.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=27626df2-f987-41ee-9a82-fd89e1bcdd61
+
+<> 2020-09-30T054515.400.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Content-Type: application/x-www-form-urlencoded
+
+clientId=mydeviceid
+
+<> 2020-09-30T054307.200.txt
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=3d5a9980-6a5a-4a7a-92ea-cb1c7b9c8573
+
+<> 2020-09-30T053556.200.txt
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=3d5a9980-6a5a-4a7a-92ea-cb1c7b9c8573
+
+<> 2020-09-30T053520.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=3d5a9980-6a5a-4a7a-92ea-cb1c7b9c8573
+
+<> 2020-09-30T053420.400.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=3d5a9980-6a5a-4a7a-92ea-cb1c7b9c8573
+
+<> 2020-09-30T053410.400.txt
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=3d5a9980-6a5a-4a7a-92ea-cb1c7b9c8573
+
+<> 2020-09-30T053245.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=3d5a9980-6a5a-4a7a-92ea-cb1c7b9c8573
+
+<> 2020-09-30T053158.400.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T053027.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T052741.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T050331.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test&offline_access
+
+<> 2020-09-30T050117.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test
+
+<> 2020-09-30T045835.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999&scope=https://graph.microsoft.com/offline_access
+
+<> 2020-09-30T045611.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999?scope=https://graph.microsoft.com/offline_access
+
+<> 2020-09-30T045447.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999?scope=https://graph.microsoft.com/offline_access
+
+<> 2020-09-30T045254.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999?scope=https://graph.microsoft.com/offline_access
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T043802.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Content-Type: application/x-www-form-urlencoded
+
+clientId=mydeviceid
+
+<> 2020-09-30T042842.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T034128.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T033854.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=ffbdd4d0-fdeb-485a-9644-bb2159a9bfdb
+
+<> 2020-09-30T024632.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=mydeviceid
+
+<> 2020-09-30T024545.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=bf12f742-9c78-471f-9496-6873d399c6ea
+
+<> 2020-09-30T024434.400.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=mydeviceid
+
+<> 2020-09-30T023850.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=bf12f742-9c78-471f-9496-6873d399c6ea
+
+<> 2020-09-30T023711.400.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=mydeviceid
+
+<> 2020-09-30T023628.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T022909.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T022709.403.html
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T020711.200.txt
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=8ba9ca6e-3bdd-43c4-b851-38cc8da65751
+
+<> 2020-09-30T124937.400.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T124455.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+<> 2020-09-30T123800.200.txt
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:7071/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+clientId=999
+
+###
+
