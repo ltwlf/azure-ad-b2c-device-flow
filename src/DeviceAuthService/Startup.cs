@@ -2,6 +2,7 @@
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 
@@ -13,15 +14,11 @@ namespace Ltwlf.Azure.B2C
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            ConfigureServices(builder.Services);
-        }    
-        
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.Configure<HttpOptions>(options => options.RoutePrefix = string.Empty);
-            var redis = ConnectionMultiplexer.Connect("localhost");
-            services.AddSingleton<IConnectionMultiplexer>(redis);
+            var config = builder.GetContext().Configuration;
+
+            builder.Services.Configure<HttpOptions>(options => options.RoutePrefix = string.Empty);
+            var redis = ConnectionMultiplexer.Connect( config.GetValue<string>("redis") );
+            builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
         }
-        
     }
 }

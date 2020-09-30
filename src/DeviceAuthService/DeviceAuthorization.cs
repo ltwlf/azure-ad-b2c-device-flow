@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using StackExchange.Redis;
@@ -21,10 +22,13 @@ namespace Ltwlf.Azure.B2C
         }
 
         private readonly IConnectionMultiplexer _muxer;
+        
+        private readonly IConfiguration _config;
 
-        public DeviceAuthorization(IConnectionMultiplexer muxer)
+        public DeviceAuthorization(IConnectionMultiplexer muxer, IConfiguration config)
         {
             _muxer = muxer;
+            _config = config;
         }
 
         [FunctionName("device_authorization")]
@@ -52,7 +56,8 @@ namespace Ltwlf.Azure.B2C
                 ClientId = clientId,
                 UserCode = new Random().Next(0, 999999).ToString("D6"),
                 ExpiresIn = 300,
-                VerificationUri = "https://holospaces.com"
+                VerificationUri = _config.GetValue<string>("SignInUrl"),
+                Scope = req.Form?["scope"]
             };
             
             var response = new AuthorizationResponse()

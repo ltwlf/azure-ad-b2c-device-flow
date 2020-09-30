@@ -12,9 +12,13 @@ namespace Ltwlf.Azure.B2C
         [JsonProperty("user_code")] public string UserCode { get; set; }
 
         [JsonProperty("verification_uri")] public string VerificationUri { get; set; }
+        
+        [JsonProperty("scope")] public string Scope { get; set; }
 
         [JsonProperty("expires_in")] public int ExpiresIn { get; set; }
 
         [JsonProperty("token")] public string Token { get; set; }
+        
+        
     }
 }

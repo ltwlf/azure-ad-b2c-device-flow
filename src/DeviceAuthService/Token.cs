@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -11,6 +13,15 @@ namespace Ltwlf.Azure.B2C
 {
     public class Token
     {
+        private class TokenResponse
+        {
+            [JsonProperty("access_Token")] public string AccessToken { get; set; }
+            [JsonProperty("token_type")] public string TokenType { get; set; }
+            [JsonProperty("expires_in")] public int ExpiresIn { get; set; }
+            [JsonProperty("refresh_token")] public string RefreshToken { get; set; }
+            [JsonProperty("scope")] public string Scope { get; set; }
+        }
+
         private readonly IConnectionMultiplexer _muxer;
 
         public Token(IConnectionMultiplexer muxer)
@@ -23,34 +34,34 @@ namespace Ltwlf.Azure.B2C
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
             HttpRequest req, ILogger log)
         {
-            var deviceCode = req.Form["device_code"];
+            var deviceCode = req.Form["device_code"].SingleOrDefault();
+            var grantType = req.Form["grant_type"].SingleOrDefault();
+            var clientId = req.Form["client_id"].SingleOrDefault();
+
+            if (deviceCode == null || grantType == null || clientId == null)
+                return new BadRequestObjectResult("device_code, client_id, grant_type are mandatory");
+
+            if (!grantType.Equals("urn:ietf:params:oauth:grant-type:device_code", StringComparison.OrdinalIgnoreCase))
+                return new BadRequestObjectResult("gran_type must be \"urn:ietf:params:oauth:grant-type:device_code\"");
 
             var pattern = $"{deviceCode}:*";
 
             var key = await Helpers.GetKeyByPattern(_muxer, pattern);
-            if (key == null)
-            {
-                return new UnauthorizedResult();
-            }
+            if (key == null) return new BadRequestObjectResult("expired_token");
 
             var value = _muxer.GetDatabase().StringGet(key);
             var authStateJson = value.ToString();
 
             var authState = JsonConvert.DeserializeObject<AuthorizationState>(authStateJson);
 
-            if (authState.Token == null)
-            {
-                var response = new AcceptedResult();
-                req.HttpContext.Response.Headers.Add("retry-after",
-                    "20"); // To inform the client how long to wait in seconds before checking the status
+            if (authState.Token == null) return new BadRequestObjectResult(new {Value = "authorization_pending"});
 
-                return response;
-            }
-
-            return new ContentResult
+            var tokenResponse = new TokenResponse
             {
-                Content = authState.Token
+                AccessToken = authState.Token
             };
+
+            return new OkObjectResult(JsonConvert.SerializeObject(tokenResponse));
         }
     }
 }
