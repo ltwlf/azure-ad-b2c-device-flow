@@ -29,9 +29,9 @@ namespace Ltwlf.Azure.B2C
 
         private readonly IConnectionMultiplexer _muxer;
         private readonly HttpClient _client;
-        private readonly IConfiguration _config;
+        private readonly ConfigOptions _config;
 
-        public Token(IConnectionMultiplexer muxer, HttpClient client, IConfiguration config)
+        public Token(IConnectionMultiplexer muxer, HttpClient client, ConfigOptions config)
         {
             _muxer = muxer;
             _client = client;
@@ -57,16 +57,12 @@ namespace Ltwlf.Azure.B2C
             if (grantType.Equals("refresh_token", StringComparison.OrdinalIgnoreCase))
             {
                 
-                var tenant = _config.GetValue<string>("B2CTenant");
-                var signInFlow = _config.GetValue<string>("SignInFlow");
-                var appId = _config.GetValue<string>("AppId");
-                var appSecret = _config.GetValue<string>("AppSecret");
                 var scope = req.Form["scope"].SingleOrDefault() ?? "openid";
                 var refreshToken = req.Form["refresh_token"];
                 
-                var b2CTokenResponse = await _client.PostAsync($"{tenant}/{signInFlow}/oauth2/v2.0/token",
+                var b2CTokenResponse = await _client.PostAsync(Helpers.GetTokenEndpoint(_config),
                     new StringContent(
-                            $"grant_type=refresh_token&refresh_token={refreshToken}&client_id={appId}&client_secret={appSecret}&scope={scope}&")
+                            $"grant_type=refresh_token&refresh_token={refreshToken}&client_id={_config.AppId}&client_secret={_config.AppSecret}&scope={scope}&")
                         {Headers = {ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded")}});
                 
                 var jwt = await b2CTokenResponse.Content.ReadAsAsync<JObject>();
@@ -81,7 +77,6 @@ namespace Ltwlf.Azure.B2C
                 };
                 
                 return new OkObjectResult(accessTokenResponse);
-                 
             }
             
             var pattern = $"{deviceCode}:*";

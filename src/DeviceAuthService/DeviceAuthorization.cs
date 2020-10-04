@@ -22,10 +22,10 @@ namespace Ltwlf.Azure.B2C
         }
 
         private readonly IConnectionMultiplexer _muxer;
-        
-        private readonly IConfiguration _config;
 
-        public DeviceAuthorization(IConnectionMultiplexer muxer, IConfiguration config)
+        private readonly ConfigOptions _config;
+
+        public DeviceAuthorization(IConnectionMultiplexer muxer, ConfigOptions config)
         {
             _muxer = muxer;
             _config = config;
@@ -52,14 +52,14 @@ namespace Ltwlf.Azure.B2C
 
             var authState = new AuthorizationState()
             {
-                DeviceCode = Guid.NewGuid().ToString(),
+                DeviceCode = GenerateDeviceCode(),
                 ClientId = clientId,
-                UserCode = new Random().Next(0, 999999).ToString("D6"),
+                UserCode = GenerateUserCode(),
                 ExpiresIn = 300,
-                VerificationUri = _config.GetValue<string>("SignInUrl"),
+                VerificationUri = _config.VerificationUri,
                 Scope = req.Form?["scope"]
             };
-            
+
             var response = new AuthorizationResponse()
             {
                 DeviceCode = authState.DeviceCode,
@@ -70,8 +70,18 @@ namespace Ltwlf.Azure.B2C
 
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
                 JsonConvert.SerializeObject(authState), new TimeSpan(0, 0, authState.ExpiresIn));
-            
+
             return new OkObjectResult(response);
+        }
+
+        private static string GenerateDeviceCode()
+        {
+            return Guid.NewGuid().ToString();
+        }
+
+        private string GenerateUserCode()
+        {
+            return new Random().Next(0, 1 * (_config.UserCodeLength +1) -1).ToString("D6");
         }
     }
 }
