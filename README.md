@@ -1,20 +1,80 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+_Work in progress_...
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Device Flow Authentication
+ 
+## Start on device
+```
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+clientId=mydeviceId&scope=offline_access
+``` 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Example Response:
+```
+{
+    "device_code":"9ab010de-9fe7-4f62-96c9-e9498004211e",
+    "user_code":"211313","verification_uri":"https://service-device-auth-flow.azurewebsites.net/",
+    "expires_in":300
+}
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+```
+## Navigate to website
+
+https://service-device-auth-flow.azurewebsites.net/
+
+Enter User Code and login
+
+### Poll for token on device
+```
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceId&device_code=9ab010de-9fe7-4f62-96c9-e9498004211e
+```
+
+Pending example response:
+```
+HTTP/1.1 400 Bad Request
+Content-Length: 33
+Content-Type: application/json; charset=utf-8
+Set-Cookie: ARRAffinity=dd716a6def04e48f4e433f7740cecb7f8a4f1c77d318c5480b769fc5157ad936;Path=/;HttpOnly;Domain=service-device-auth-flow.azurewebsites.net
+Date: Wed, 30 Sep 2020 12:37:11 GMT
+
+{
+  "value": "authorization_pending"
+}
+```
+Expired token
+```
+HTTP/1.1 400 Bad Request
+Content-Length: 13
+Content-Type: text/plain; charset=utf-8
+Set-Cookie: ARRAffinity=dd716a6def04e48f4e433f7740cecb7f8a4f1c77d318c5480b769fc5157ad936;Path=/;HttpOnly;Domain=service-device-auth-flow.azurewebsites.net
+Date: Wed, 30 Sep 2020 12:44:33 GMT
+
+expired_token
+```
+
+Token
+
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Vary: Accept-Encoding
+Set-Cookie: ARRAffinity=dd716a6def04e48f4e433f7740cecb7f8a4f1c77d318c5480b769fc5157ad936;Path=/;HttpOnly;Domain=service-device-auth-flow.azurewebsites.net
+Date: Wed, 30 Sep 2020 12:46:31 GMT
+
+{
+    "access_Token":"eyJraWQiOiJ2VE96SmhwS3dIeD....",
+    "token_type":null,
+    "expires_in":0,
+    "refresh_token":null,
+    "scope":nul
+}
+
+```

@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using StackExchange.Redis;
+using  System.Linq;
 
 namespace Ltwlf.Azure.B2C
 {
@@ -22,9 +25,12 @@ namespace Ltwlf.Azure.B2C
 
         private readonly IConnectionMultiplexer _muxer;
 
-        public DeviceAuthorization(IConnectionMultiplexer muxer)
+        private readonly ConfigOptions _config;
+
+        public DeviceAuthorization(IConnectionMultiplexer muxer, IOptions<ConfigOptions> options)
         {
             _muxer = muxer;
+            _config = options.Value;
         }
 
         [FunctionName("device_authorization")]
@@ -48,13 +54,14 @@ namespace Ltwlf.Azure.B2C
 
             var authState = new AuthorizationState()
             {
-                DeviceCode = Guid.NewGuid().ToString(),
+                DeviceCode = GenerateDeviceCode(),
                 ClientId = clientId,
-                UserCode = new Random().Next(0, 999999).ToString("D6"),
+                UserCode = GenerateUserCode(),
                 ExpiresIn = 300,
-                VerificationUri = "https://holospaces.com"
+                VerificationUri = _config.VerificationUri,
+                Scope = req.Form?["scope"]
             };
-            
+
             var response = new AuthorizationResponse()
             {
                 DeviceCode = authState.DeviceCode,
@@ -65,8 +72,23 @@ namespace Ltwlf.Azure.B2C
 
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
                 JsonConvert.SerializeObject(authState), new TimeSpan(0, 0, authState.ExpiresIn));
-            
-            return new OkObjectResult(JsonConvert.SerializeObject(response));
+
+            return new OkObjectResult(response);
+        }
+
+        private static string GenerateDeviceCode()
+        {
+            return Guid.NewGuid().ToString();
+        }
+
+        private string GenerateUserCode()
+        {
+            int num = 1;
+            for (var i = 0; i < _config.UserCodeLength; i++)
+            {
+                num = num * 10;
+            }
+            return new Random().Next(0, num -1).ToString($"D{_config.UserCodeLength}");
         }
     }
 }

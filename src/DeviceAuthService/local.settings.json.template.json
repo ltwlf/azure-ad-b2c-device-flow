@@ -1,0 +1,14 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+        "Config:AppId": "",
+        "Config:AppSecret": "",
+        "Config:Tenant": "myb2c",
+        "Config:RedirectUri": "http://localhost:7071/authorization_callback",
+        "Config:SignInPolicy": "B2C_1A_signup_signin",
+        "Config:VerificationUri": "http://localhost:7071",
+        "Config:Redis": "localhost"
+    }
+}

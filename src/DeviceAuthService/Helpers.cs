@@ -29,5 +29,10 @@ namespace Ltwlf.Azure.B2C
 
             return JsonConvert.DeserializeObject<T>(json);
         }
+        
+        public static string GetTokenEndpoint(ConfigOptions config)
+        {
+            return $"https://{config.Tenant}.b2clogin.com/{config.Tenant}.onmicrosoft.com/{config.SignInPolicy}/oauth2/v2.0/token";
+        }
     }
 }

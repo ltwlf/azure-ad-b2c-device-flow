@@ -1,0 +1,485 @@
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=bcc55d45-6527-4548-a455-0e091950a13f
+
+<> 2020-10-07T055009.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-10-07T054856.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-10-07T054155.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=91331639-df88-4723-8012-eeaa5ae55653
+
+<> 2020-10-07T053944.400.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T053938.200.json
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=392d0853-4afb-4617-9c77-5d21948521ab
+
+<> 2020-10-07T053859.400.json
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=392d0853-4afb-4617-9c77-5d21948521ab
+
+<> 2020-10-07T053641.400.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T053635.200.json
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=716c7fde-87d5-48ab-8857-48aefba49b6f
+
+<> 2020-10-07T053604.400.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T053528.200.json
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=1793f004-c062-4e4a-afe6-b5d0eee83535
+
+<> 2020-10-07T053154.400.json
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=1793f004-c062-4e4a-afe6-b5d0eee83535
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=1793f004-c062-4e4a-afe6-b5d0eee83535
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=1793f004-c062-4e4a-afe6-b5d0eee83535
+
+<> 2020-10-07T053034.400.json
+
+###
+
+POST http://localhost:7071/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code=1793f004-c062-4e4a-afe6-b5d0eee83535
+
+<> 2020-10-07T053027.400.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T052756.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T051729.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T051645.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T050437.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T044723.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+<> 2020-10-07T041515.200.json
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+clientId=my_client
+
+###
+
+POST http://localhost:7071/device_authorization
+Content-Type: application/x-www-form-urlencoded
+clientId=my_client: 
+Accept: application/json
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T043635.200.json
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T043617.200.json
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T043346.200.json
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T043009.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042926.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042747.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94
+
+<> 2020-10-01T042737.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042722.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042540.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042525.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042322.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042254.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=refresh_token&client_Id=12324&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94&refresh_token=eyJraWQiOiJ2VE96SmhwS3dIeDBBRzJma1N6Z00zcDJkdW52eDBMQXFYSktDZ1EtaEp3IiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.LE5gqDGnxYztQx98o9yP4BZQaLTpXgbBPlct8ZJ2IbNTSRp0yKRLUJIRhvJ8wmsYGoOD89_UGBWrqmznhOtFHu9PcJ3NSHi8KA6yTkM0ldITck4QjVdXK236_-0ZjoRbq4bNOW_55FAxjKgDDCH1DddfhHqMU9lJIdn3bgDSMkEC2cjT1WPuDDIeE7onOupXaBCI_JhdX_V5olOREMfJxWDt4XTd3rQLlGk29Dk7OQuwbUe9NScRu6xk8EBZNIRiBU7p5jFjLPbKIez0Ydh4okrYjrHv527rSImfeGUA2NLO9oEtT-e_s2PXFhTilgXFsCrFcb7dDlzZgBh9xhApKQ.KCqSpQECuVtNA4-D.NBT-nwUzWwOUlo3NkayDW9rIte7Q51Kx8qK-VWDxcd4tK-ToOhBiwU3X2W7iVB6ow11DP8cLgNdJ0BndO7Dr0bCRNe-BiGvlqtoHOcVctvbW6y6M-Gm5RfeWgdHUI7KK2VN0Il6uhk0u16lCy3eTntDDt0c8GIDVvpXUeJ2YmwoXldLl84y9Z4M_ET8TmH-7j3OybUwwfzBGHDa66iAYl8zpY4gFrvgKhJxUbcQmMWwWZAU4e1ArtlJf_12yrSQYJvCV1LQlBc8-qSnwlJbfp_oqCD93bKrVd5BpWJk7H13Edi-HRUx2buJ6zG3QmfCnD7qiFDv9zfgqi5D2lLcNlkVa6TydyE9Zpey2Lres21GlDHQP8z0-RYHA01M6zfMWA9wkey5BvpQi_LcaJEkiL51WP8jWUxE5xcxP74N_9Ousr9a0zOYSNw88-Wmv4KAh5Nsqus5xeMO3alUWqzMqD-2J5MdvjonB6nkTRsc4-XpLPjjB6L-YGNCfiXDay3mB5GwvcaSkiDcIwbTuoywaf-RCECELvpc48aubbS4-5IXRw3feX12nr8z6bW7_XQdkBEn-45QEUOlJ8ifsHfCOS6prdHarfOaK-EsQF_lbc2RC10AAT1ORINZLjKfw11E196GjQtrftZpufYTrIR6ss78NeXpVLHYqCmlk8VBCE_ZRgQK6-HjaHh3zjWCUnAUXXhr5H1-Iko_5N9BJ-Ehjfg.EuwE2WRDCMyeALEJlnnqKw
+
+<> 2020-10-01T042159.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=mydeviceid&device_code=2713bc15-3f64-4c3b-9b69-989e30dd6f94
+
+<> 2020-09-30T062731.200.json
+
+###
+
+POST https://service-device-auth-flow.azurewebsites.net/device_authorization
+Content-Type: application/x-www-form-urlencoded
+
+clientId=mydeviceid&scope=https://holospacesb2c.onmicrosoft.com/5e5b80e1-a7c3-45f5-b238-4f1f03896234/test offline_access
+
+<> 2020-09-30T062649.200.json
+
+###
+
+POST http://localhost:7071/token
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=urn:ietf:params:oauth:grant-type:device_code&client_Id=999&device_code=db77ea83-b920-4dba-91d0-a839a7c83b64
+
+<> 2020-09-30T060413.200.json
+
+###
+
