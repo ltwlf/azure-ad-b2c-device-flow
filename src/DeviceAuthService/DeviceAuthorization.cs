@@ -6,8 +6,10 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using StackExchange.Redis;
+using  System.Linq;
 
 namespace Ltwlf.Azure.B2C
 {
@@ -25,10 +27,10 @@ namespace Ltwlf.Azure.B2C
 
         private readonly ConfigOptions _config;
 
-        public DeviceAuthorization(IConnectionMultiplexer muxer, ConfigOptions config)
+        public DeviceAuthorization(IConnectionMultiplexer muxer, IOptions<ConfigOptions> options)
         {
             _muxer = muxer;
-            _config = config;
+            _config = options.Value;
         }
 
         [FunctionName("device_authorization")]
@@ -81,7 +83,12 @@ namespace Ltwlf.Azure.B2C
 
         private string GenerateUserCode()
         {
-            return new Random().Next(0, 1 * (_config.UserCodeLength +1) -1).ToString("D6");
+            int num = 1;
+            for (var i = 0; i < _config.UserCodeLength; i++)
+            {
+                num = num * 10;
+            }
+            return new Random().Next(0, num -1).ToString($"D{_config.UserCodeLength}");
         }
     }
 }

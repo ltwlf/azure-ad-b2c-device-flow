@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -31,14 +32,14 @@ namespace Ltwlf.Azure.B2C
         private readonly HttpClient _client;
         private readonly ConfigOptions _config;
 
-        public Token(IConnectionMultiplexer muxer, HttpClient client, ConfigOptions config)
+        public Token(IConnectionMultiplexer muxer, HttpClient client, IOptions<ConfigOptions> options)
         {
             _muxer = muxer;
             _client = client;
-            _config = config;
+            _config = options.Value;
         }
 
-        [FunctionName("Token")]
+        [FunctionName("token")]
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
             HttpRequest req, ILogger log)
@@ -47,7 +48,7 @@ namespace Ltwlf.Azure.B2C
             var grantType = req.Form["grant_type"].SingleOrDefault();
             var clientId = req.Form["client_id"].SingleOrDefault();
 
-            if (deviceCode == null || grantType == null || clientId == null)
+            if (deviceCode == null || grantType == null)
                 return new BadRequestObjectResult("device_code, client_id, grant_type are mandatory");
 
             /*

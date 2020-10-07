@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 
@@ -16,12 +17,12 @@ namespace Ltwlf.Azure.B2C
     public class SignInRedirect
     {
         private readonly IConnectionMultiplexer _muxer;
-        private readonly IConfiguration _config;
+        private readonly ConfigOptions _config;
 
-        public SignInRedirect(IConnectionMultiplexer muxer, IConfiguration config)
+        public SignInRedirect(IConnectionMultiplexer muxer, IOptions<ConfigOptions> options)
         {
             _muxer = muxer;
-            _config = config;
+            _config = options.Value;
         }
 
         [FunctionName("user_code")]
@@ -40,15 +41,14 @@ namespace Ltwlf.Azure.B2C
 
             var authState = await Helpers.GetValueByKeyPattern<AuthorizationState>(_muxer, $"*:{userCode}");
 
-            var tenant = _config.GetValue<string>("B2CTenant");
-            var signInFlow = _config.GetValue<string>("SignInFlow");
-            var appId = _config.GetValue<string>("AppId");
-            var redirectUri = HttpUtility.UrlEncode(_config.GetValue<string>("RedirectUri"));
+            var tenant = _config.Tenant;
+            var signInFlow = _config.SignInPolicy;
+            var appId = _config.AppId;
+            var redirectUri = HttpUtility.UrlEncode(_config.RedirectUri);
             var scope = authState.Scope ?? "openid";
 
             return new RedirectResult(
-                $"{tenant}/oauth2/v2.0/authorize?p={signInFlow}&client_Id={appId}&redirect_uri={redirectUri}&scope={scope}&state={authState.UserCode}&nonce=defaultNonce&response_type=code&prompt=login");
-            
+                $"https://{_config.Tenant}.b2clogin.com/{_config.Tenant}.onmicrosoft.com/oauth2/v2.0/authorize?p={signInFlow}&client_Id={appId}&redirect_uri={redirectUri}&scope={scope}&state={authState.UserCode}&nonce=defaultNonce&response_type=code&prompt=login");
         }
     }
 }

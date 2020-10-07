@@ -9,6 +9,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using StackExchange.Redis;
@@ -21,11 +22,11 @@ namespace Ltwlf.Azure.B2C
         private readonly HttpClient _client;
         private readonly ConfigOptions _config;
 
-        public AuthorizationCallback(IConnectionMultiplexer muxer, HttpClient client, ConfigOptions config)
+        public AuthorizationCallback(IConnectionMultiplexer muxer, HttpClient client, IOptions<ConfigOptions> options)
         {
             _muxer = muxer;
             _client = client;
-            _config = config;
+            _config = options.Value;
         }
 
         [FunctionName("authorization_callback")]
@@ -49,7 +50,7 @@ namespace Ltwlf.Azure.B2C
             
             var tokenResponse = await _client.PostAsync(Helpers.GetTokenEndpoint(_config),
                 new StringContent(
-                        $"grant_type=authorization_code&client_id={_config.AppId}&client_secret={_config.AppId}&scope={scope}&code={code}")
+                        $"grant_type=authorization_code&client_id={_config.AppId}&client_secret={_config.AppSecret}&scope={scope}&code={code}")
                     {Headers = {ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded")}});
 
             var jwt = await tokenResponse.Content.ReadAsAsync<JObject>();
