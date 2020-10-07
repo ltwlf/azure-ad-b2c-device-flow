@@ -333,3 +333,4 @@ src/DeviceAuthClient/wwwroot/appsettings.Development.json
 
 # dev appsettings
 appsettings.Development.json
+.vscode/

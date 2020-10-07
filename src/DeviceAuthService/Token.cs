@@ -41,7 +41,7 @@ namespace Ltwlf.Azure.B2C
 
         [FunctionName("token")]
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "oauth/token")]
             HttpRequest req, ILogger log)
         {
             var deviceCode = req.Form["device_code"].SingleOrDefault();
