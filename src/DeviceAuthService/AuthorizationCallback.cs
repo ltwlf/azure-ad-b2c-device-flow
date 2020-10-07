@@ -61,7 +61,7 @@ namespace Ltwlf.Azure.B2C
             authState.TokenType = jwt.Value<string>("token_type");
 
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
-                JsonConvert.SerializeObject(authState));
+                JsonConvert.SerializeObject(authState), TimeSpan.FromSeconds(30));
 
             return new OkResult();
         }
