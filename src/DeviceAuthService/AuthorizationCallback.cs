@@ -31,7 +31,7 @@ namespace Ltwlf.Azure.B2C
 
         [FunctionName("authorization_callback")]
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "oauth/authorization_callback")]
             HttpRequest req, ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");

@@ -35,7 +35,7 @@ namespace Ltwlf.Azure.B2C
 
         [FunctionName("device_authorization")]
         public IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "oauth/device_authorization")]
             HttpRequest req,
             ILogger log)
         {
