@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -31,23 +32,23 @@ namespace Ltwlf.Azure.B2C
 
         [FunctionName("authorization_callback")]
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "oauth/authorization_callback")]
-            HttpRequest req, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "authorization_callback")]
+            HttpRequest req, ILogger log, ExecutionContext context)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             string code = req.Query["code"];
             string userCode = req.Query["state"];
-            
+
 
             var authState = await Helpers.GetValueByKeyPattern<AuthorizationState>(_muxer, $"*:{userCode}");
             if (authState == null)
             {
                 throw new NullReferenceException("Device authentication request expired");
             }
-            
+
             var scope = authState.Scope ?? "openid";
-            
+
             var tokenResponse = await _client.PostAsync(Helpers.GetTokenEndpoint(_config),
                 new StringContent(
                         $"grant_type=authorization_code&client_id={_config.AppId}&client_secret={_config.AppSecret}&scope={scope}&code={code}")
@@ -63,8 +64,9 @@ namespace Ltwlf.Azure.B2C
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
                 JsonConvert.SerializeObject(authState), TimeSpan.FromSeconds(30));
 
-            return new OkResult();
+            var filePath = Path.Combine(context.FunctionDirectory, "../www/success.html");
+
+            return new FileStreamResult(File.OpenRead(filePath), "text/html; charset=UTF-8");
         }
-        
     }
 }
