@@ -38,10 +38,7 @@ namespace Ltwlf.Azure.B2C
             HttpRequest req, ILogger log, ExecutionContext context)
         {
             log.LogInformation("authorization_callback function processed a request.");
-            
-            var successPagePath  = _config.SuccessPage ?? Path.Combine(context.FunctionDirectory, "../www/success.html");
-            var errorPagePath  = _config.ErrorPage ?? Path.Combine(context.FunctionDirectory, "../www/error.html");
-            
+
             if(req.Query.ContainsKey("error"))
             {
                 return _pageFactory.GetPageResult(PageFactory.PageType.Error);
