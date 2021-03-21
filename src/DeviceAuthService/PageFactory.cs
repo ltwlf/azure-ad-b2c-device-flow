@@ -34,7 +34,8 @@ namespace Ltwlf.Azure.B2C
             {
                 PageType.UserCode => _userCodePagePath,
                 PageType.Success => _successPagePath,
-                PageType.Error => _errorPagePath
+                PageType.Error => _errorPagePath,
+                _ => throw new ArgumentOutOfRangeException(nameof(pageType), pageType, null)
             };
             
             if (path.StartsWith("http"))

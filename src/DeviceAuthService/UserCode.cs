@@ -58,7 +58,7 @@ namespace Ltwlf.Azure.B2C
                     $"https://{_config.Tenant}.b2clogin.com/{_config.Tenant}.onmicrosoft.com/oauth2/v2.0/authorize?p={signInFlow}&client_Id={appId}&redirect_uri={redirectUri}&scope={scope}&state={authState.UserCode}&nonce=defaultNonce&response_type=code&prompt=login";
 
                 return useAjax
-                    ? new ContentResult {Content = url, ContentType = "text/plain"}
+                    ? (IActionResult) new ContentResult {Content = url, ContentType = "text/plain"}
                     : new RedirectResult(url);
             }
             catch (Exception e)
