@@ -21,12 +21,14 @@ namespace Ltwlf.Azure.B2C
     {
         private readonly IConnectionMultiplexer _muxer;
         private readonly HttpClient _client;
+        private readonly PageFactory _pageFactory;
         private readonly ConfigOptions _config;
 
-        public AuthorizationCallback(IConnectionMultiplexer muxer, HttpClient client, IOptions<ConfigOptions> options)
+        public AuthorizationCallback(IConnectionMultiplexer muxer, HttpClient client, IOptions<ConfigOptions> options, PageFactory pageFactory)
         {
             _muxer = muxer;
             _client = client;
+            _pageFactory = pageFactory;
             _config = options.Value;
         }
 
@@ -35,16 +37,24 @@ namespace Ltwlf.Azure.B2C
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "authorization_callback")]
             HttpRequest req, ILogger log, ExecutionContext context)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("authorization_callback function processed a request.");
+            
+            var successPagePath  = _config.SuccessPage ?? Path.Combine(context.FunctionDirectory, "../www/success.html");
+            var errorPagePath  = _config.ErrorPage ?? Path.Combine(context.FunctionDirectory, "../www/error.html");
+            
+            if(req.Query.ContainsKey("error"))
+            {
+                return _pageFactory.GetPageResult(PageFactory.PageType.Error);
+            }
 
             string code = req.Query["code"];
             string userCode = req.Query["state"];
-
-
+            
             var authState = await Helpers.GetValueByKeyPattern<AuthorizationState>(_muxer, $"*:{userCode}");
             if (authState == null)
             {
-                throw new NullReferenceException("Device authentication request expired");
+                log.LogWarning("Device authentication request expired");
+                return _pageFactory.GetPageResult(PageFactory.PageType.Error);
             }
 
             var scope = authState.Scope ?? "openid";
@@ -64,9 +74,7 @@ namespace Ltwlf.Azure.B2C
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
                 JsonConvert.SerializeObject(authState), TimeSpan.FromSeconds(30));
 
-            var filePath = Path.Combine(context.FunctionDirectory, "../www/success.html");
-
-            return new FileStreamResult(File.OpenRead(filePath), "text/html; charset=UTF-8");
+            return _pageFactory.GetPageResult(PageFactory.PageType.Success);
         }
     }
 }

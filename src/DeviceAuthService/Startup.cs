@@ -15,16 +15,21 @@ namespace Ltwlf.Azure.B2C
         public override void Configure(IFunctionsHostBuilder builder)
         {
             var config = builder.GetContext().Configuration;
-            
+
             builder.Services.AddOptions<ConfigOptions>()
                 .Configure<IConfiguration>((settings, configuration) =>
                 {
                     configuration.GetSection("Config").Bind(settings);
                 });
 
+            builder.Services.AddSingleton<PageFactory>();
+
             builder.Services.AddHttpClient();
+
             builder.Services.Configure<HttpOptions>(options => options.RoutePrefix = string.Empty);
+
             var redis = ConnectionMultiplexer.Connect(config.GetValue<string>("Config:Redis"));
+
             builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
         }
     }

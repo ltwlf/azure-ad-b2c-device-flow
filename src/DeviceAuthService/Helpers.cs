@@ -1,5 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 
@@ -34,5 +38,6 @@ namespace Ltwlf.Azure.B2C
         {
             return $"https://{config.Tenant}.b2clogin.com/{config.Tenant}.onmicrosoft.com/{config.SignInPolicy}/oauth2/v2.0/token";
         }
+        
     }
 }

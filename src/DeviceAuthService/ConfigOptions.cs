@@ -8,8 +8,13 @@
         public string RedirectUri { get; set; }
         public string SignInPolicy { get; set; }
         public string VerificationUri { get; set; }
-        public string Redis { get; set; }
         public int ExpiresIn { get; set; } = 300;
         public int UserCodeLength { get; set; } = 6;
+
+        public string UserCodePage { get; set; }
+
+        public string SuccessPage { get; set; }
+        
+        public string ErrorPage { get; set; }
     }
 }
