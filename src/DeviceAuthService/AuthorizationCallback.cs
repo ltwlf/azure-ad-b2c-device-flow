@@ -64,6 +64,12 @@ namespace Ltwlf.Azure.B2C
                         $"grant_type=authorization_code&client_id={_config.AppId}&client_secret={_config.AppSecret}&scope={scope}&code={code}")
                     {Headers = {ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded")}});
 
+            if (tokenResponse.IsSuccessStatusCode == false)
+            {
+                var errorContent = await tokenResponse.Content.ReadAsStringAsync();
+                return new ContentResult() {Content = errorContent};
+            }
+
             var jwt = await tokenResponse.Content.ReadAsAsync<JObject>();
 
             authState.AccessToken = jwt.Value<string>("access_token");
@@ -72,7 +78,7 @@ namespace Ltwlf.Azure.B2C
             authState.TokenType = jwt.Value<string>("token_type");
 
             _muxer.GetDatabase().StringSet($"{authState.DeviceCode}:{authState.UserCode}",
-                JsonConvert.SerializeObject(authState), TimeSpan.FromSeconds(30));
+                JsonConvert.SerializeObject(authState), TimeSpan.FromSeconds(_config.ExpiresIn));
 
             return _pageFactory.GetPageResult(PageFactory.PageType.Success);
         }
