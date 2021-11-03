@@ -23,9 +23,14 @@ namespace Ltwlf.Azure.B2C
 
         public PageFactory(IOptions<ConfigOptions> options, IHostingEnvironment  host)
         {
-            _userCodePagePath = options.Value.UserCodePage ?? Path.Combine(host.ContentRootPath, "./www/userCode.html");
-            _successPagePath = options.Value.SuccessPage ?? Path.Combine(host.ContentRootPath, "./www/success.html");
-            _errorPagePath = options.Value.ErrorPage ?? Path.Combine(host.ContentRootPath, "./www/error.html");
+            var local_root = Environment.GetEnvironmentVariable("AzureWebJobsScriptRoot");
+            var azure_root = $"{Environment.GetEnvironmentVariable("HOME")}/site/wwwroot";
+
+            var actual_root = local_root ?? azure_root;
+
+            _userCodePagePath = options.Value.UserCodePage ?? Path.Combine(actual_root, "./www/userCode.html");
+            _successPagePath = options.Value.SuccessPage ?? Path.Combine(actual_root, "./www/success.html");
+            _errorPagePath = options.Value.ErrorPage ?? Path.Combine(actual_root, "./www/error.html");
         }
 
         public IActionResult GetPageResult(PageType pageType)
