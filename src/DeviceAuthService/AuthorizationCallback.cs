@@ -34,7 +34,7 @@ namespace Ltwlf.Azure.B2C
 
         [FunctionName("authorization_callback")]
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "authorization_callback")]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "authorization_callback")]
             HttpRequest req, ILogger log, ExecutionContext context)
         {
             log.LogInformation("authorization_callback function processed a request.");
@@ -44,9 +44,10 @@ namespace Ltwlf.Azure.B2C
                 return _pageFactory.GetPageResult(PageFactory.PageType.Error);
             }
 
-            string code = req.Query["code"];
-            string userCode = req.Query["state"];
-            
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            String code = HttpUtility.ParseQueryString(requestBody).Get("code");
+            String userCode = HttpUtility.ParseQueryString(requestBody).Get("state");
+                        
             var authState = await Helpers.GetValueByKeyPattern<AuthorizationState>(_muxer, $"*:{userCode}");
             if (authState == null)
             {
